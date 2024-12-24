@@ -1,0 +1,65 @@
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[11pt, letterpaper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
+\usepackage{ifthen} % Required for ifthenelse statements langueage used
+\newcommand{\lang}{en} % Change to 'en' for English
+\fontdir[fonts/] % Specify the location of the included fonts
+\colorlet{awesome}{awesome-red} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+\newcommand{\translatedtoday}{
+  \ifthenelse{\equal{\lang}{es}}{
+    \def\today{\number\day~de~\ifcase\month\or
+      enero\or febrero\or marzo\or abril\or mayo\or junio\or
+      julio\or agosto\or septiembre\or octubre\or noviembre\or diciembre\fi~de~\number\year}
+  }{
+    \def\today{\number\day~\ifcase\month\or
+      January\or February\or March\or April\or May\or June\or
+      July\or August\or September\or October\or November\or December\fi~\number\year}
+  }
+}
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+\name{Oscar A.}{Quintero López}
+\homepage{oquinterol.com}
+\email{oquinterol@unal.edu.co}
+\github{oquinterol}
+\linkedin{oquinterol}
+\twitter{oquinterol}
+%----------------------------------------------------------------------------------------
+\ifthenelse{\equal{\lang}{es}}{
+    \position{Licenciado en Biología - Bioinformático} % Your expertise/fields in Spanish
+    %\quote{``Sé el cambio que quieres ver en el mundo."} % A quote or statement
+}{
+    \position{Bachelor in Biology - Bioinformatician} % Your expertise/fields in English
+    %\quote{``Make the change that you want to see in the world."} % A quote or statement
+}
+%\quote{``Make the change that you want to see in the world."} % A quote or statement
+%----------------------------------------------------------------------------------------
+\translatedtoday
+% Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+\makecvfooter{\today}{Oscar A. Quintero López~~~·~~~Currículum Vitae}{\thepage}
+%----------------------------------------------------------------------------------------
+\begin{document}
+\makecvheader % Print the header
+%----------------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%----------------------------------------------------------------------------------------
+\input{cv-sections/experience.tex}
+\input{cv-sections/education.tex}
+\input{cv-sections/skills.tex}
+\input{cv-sections/language.tex}
+\input{cv-sections/presentation.tex}
+\input{cv-sections/extracurricular.tex}
+%\input{cv-sections/honors.tex}
+%\input{cv-sections/writing.tex}
+%\input{cv-sections/committees.tex}
+\input{cv-sections/signature.tex}
+%----------------------------------------------------------------------------------------
+\end{document}
