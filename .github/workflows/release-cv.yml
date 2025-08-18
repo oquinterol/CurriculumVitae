@@ -1,0 +1,61 @@
+name: Build and Release CV
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/') 
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup TeX Live
+      uses: teatimeguest/setup-texlive-action@v3
+      with:
+        packages: |
+          scheme-basic
+          latex-bin
+          xetex
+          fontspec
+          geometry
+          xcolor
+          tikz
+          enumitem
+          ragged2e
+          ifthen
+          fontawesome
+          
+    - name: Install additional fonts
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fontconfig
+        sudo mkdir -p /usr/share/fonts/truetype/custom
+        sudo cp -r fonts/* /usr/share/fonts/truetype/custom/
+        fc-cache -f -v
+        
+    - name: Build both CV versions
+      run: make both
+        
+    - name: Upload Spanish CV to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./cv_spanish.pdf
+        asset_name: cv_spanish.pdf
+        asset_content_type: application/pdf
+        
+    - name: Upload English CV to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./cv_english.pdf
+        asset_name: cv_english.pdf
+        asset_content_type: application/pdf
