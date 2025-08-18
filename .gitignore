@@ -33,7 +33,6 @@
 *.run.xml
 
 ## Build tool auxiliary files:
-build/
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
@@ -45,6 +44,7 @@ build/
 # latexrun
 latex.out/
 build/
+others/
 ## Auxiliary and intermediate files from other packages:
 # algorithms
 *.alg
