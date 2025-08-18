@@ -275,3 +275,5 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+# Signature only on local
+img/firma.png
