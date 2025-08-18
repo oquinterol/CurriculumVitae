@@ -53,5 +53,6 @@
       "name": "Make Clean",
       "tools": ["make-clean"]
     }
-  ]
+  ],
+  "makefile.configureOnOpen": false
 }
