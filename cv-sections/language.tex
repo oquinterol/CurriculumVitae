@@ -1,18 +1,43 @@
 %----------------------------------------------------------------------------------------
-%    SECTION TITLE
+%	SECTION TITLE
 %----------------------------------------------------------------------------------------
-\ifthenelse{\equal{\lang}{es}}{\cvsection{Idiomas}}{\cvsection{Languages}}
+
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Idiomas}
+}{
+    \cvsection{Languages}
+}
+
 %----------------------------------------------------------------------------------------
-%    SECTION CONTENT
+%	SECTION CONTENT
 %----------------------------------------------------------------------------------------
+
 \begin{cvskills}
+
 %------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Español}{Spanish}} % Category
-{\ifthenelse{\equal{\lang}{es}}{Nativo}{Native}} % Skill Level
+
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvskill
+    {Español} % Category
+    {Nativo} % Skills
+    
+    %------------------------------------------------
+    
+    \cvskill
+    {Inglés} % Category
+    {Nivel intermedio} % Skills
+}{
+    \cvskill
+    {Spanish} % Category
+    {Native} % Skills
+    
+    %------------------------------------------------
+    
+    \cvskill
+    {English} % Category
+    {Intermediate proficiency} % Skills
+}
+
 %------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Inglés}{English}} % Category
-{\ifthenelse{\equal{\lang}{es}}{Nivel intermedio}{Intermediate level}} % Skill Level
-%------------------------------------------------
+
 \end{cvskills}

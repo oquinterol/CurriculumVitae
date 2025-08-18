@@ -1,34 +1,78 @@
 %----------------------------------------------------------------------------------------
-%    SECTION TITLE
+%	SECTION TITLE
 %----------------------------------------------------------------------------------------
-\ifthenelse{\equal{\lang}{es}}{\cvsection{Habilidades}}{\cvsection{Skills}}
+
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Habilidades}
+}{
+    \cvsection{Skills}
+}
+
 %----------------------------------------------------------------------------------------
-%    SECTION CONTENT
+%	SECTION CONTENT
 %----------------------------------------------------------------------------------------
+
 \begin{cvskills}
-%------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Bioinformática}{Bioinformatics}} % Category
-{\ifthenelse{\equal{\lang}{es}}{Análisis de RNA-Seq y GBS, desarrollo de pipelines bioinformáticos, manejo de datos ómicos}{RNA-Seq and GBS analysis, bioinformatics pipelines development, omics data handling}} % Skill Level
-%------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Programación}{Programming}} % Category
-{Python, Bash, R, C, SQL} % Skill Level
-%------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Sistemas y Plataformas}{Systems and Platforms}} % Category
-{Linux (\ifthenelse{\equal{\lang}{es}}{Administración de servidores}{Server Administration}), Docker, Nextflow} % Skill Level
-%------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Colaboración y Versiones}{Collaboration and Version Control}} % Category
-{Git, GitHub} % Skill Level
-%------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Desarrollo y Análisis de Datos}{Data Analysis and Development}} % Category
-{CMake, \ifthenelse{\equal{\lang}{es}}{Análisis estadístico con R y Python, Visualización con ggplot2 y Matplotlib}{Statistical analysis with R and Python, Visualization with ggplot2 and Matplotlib}} % Skill Level
-%------------------------------------------------
-\cvskill
-{\ifthenelse{\equal{\lang}{es}}{Herramientas de Biología Computacional}{Computational Biology Tools}} % Category
-{Cobra Toolbox, KEGG API, SBML, BlobToolKit} % Skill Level
-%------------------------------------------------
+
+    %------------------------------------------------
+    
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Bioinformática} % Category
+        {Análisis de RNA-Seq y GBS, desarrollo de pipelines bioinformáticos, manejo de datos ómicos} % Skills
+    }{
+        \cvskill
+        {Bioinformatics} % Category
+        {RNA-Seq and GBS analysis, bioinformatics pipeline development, omics data handling} % Skills
+    }
+    
+    %------------------------------------------------
+    
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Programación} % Category
+        {Python, Bash, R, C, SQL} % Skills
+    }{
+        \cvskill
+        {Programming} % Category
+        {Python, Bash, R} % Skills
+    }
+    
+    %------------------------------------------------
+    
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Sistemas y Plataformas} % Category
+        {Linux (Administración de Servidores), Docker, Kubernetes} % Skills
+    }{
+        \cvskill
+        {Systems and Platforms} % Category
+        {Linux (Server Administration), Docker} % Skills
+    }
+    
+    %------------------------------------------------
+    
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Colaboración y Versiones} % Category
+        {Git, GitHub} % Skills
+    }{
+        \cvskill
+        {Collaboration and Version Control} % Category
+        {Git, GitHub} % Skills
+    }
+    
+    %------------------------------------------------
+    
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Desarrollo y Análisis de Datos} % Category
+        {CMake, Análisis estadístico con R y Python, Visualización con ggplot2 y Matplotlib} % Skills
+    }{
+        \cvskill
+        {Data Development and Analysis} % Category
+        {Statistical analysis with R and Python, Visualization with ggplot2 and Matplotlib} % Skills
+    }
+    
+    %------------------------------------------------
 \end{cvskills}

@@ -1,0 +1,140 @@
+#!/bin/bash
+
+# CV Bilingüe - Script de Inicialización
+# Configura el proyecto para compilación bilingüe y ejecuta Makefile
+
+set -e
+
+show_help() {
+    echo "🎓 CV Bilingüe - Script de Inicialización"
+    echo ""
+    echo "Uso: ./init [COMANDO]"
+    echo ""
+    echo "Comandos disponibles:"
+    echo "  help          - Muestra esta ayuda"
+    echo "  setup         - Configura el proyecto inicial"
+    echo "  english       - Compila CV en inglés (default)"
+    echo "  spanish       - Compila CV en español"
+    echo "  both          - Compila ambas versiones"
+    echo "  clean         - Limpia archivos temporales"
+    echo "  status        - Muestra el estado del proyecto"
+    echo ""
+    echo "Ejemplos:"
+    echo "  ./init                # Compila en español"
+    echo "  ./init english        # Compila en inglés"
+    echo "  ./init both           # Compila ambas versiones"
+}
+
+check_dependencies() {
+    echo "🔍 Verificando dependencias..."
+    
+    if ! command -v xelatex &> /dev/null; then
+        echo "❌ Error: xelatex no está instalado"
+        echo "   Instala: sudo apt-get install texlive-xetex (Ubuntu/Debian)"
+        exit 1
+    fi
+    
+    if ! command -v make &> /dev/null; then
+        echo "❌ Error: make no está instalado"
+        echo "   Instala: sudo apt-get install make (Ubuntu/Debian)"
+        exit 1
+    fi
+    
+    echo "✅ Dependencias verificadas"
+}
+
+show_status() {
+    echo "📊 Estado del Proyecto CV Bilingüe"
+    echo "=================================="
+    echo ""
+    
+    # Git status
+    if [ -d ".git" ]; then
+        CURRENT_BRANCH=$(git branch --show-current)
+        echo "🔀 Branch actual: $CURRENT_BRANCH"
+        
+        # Check for untracked/modified files
+        if [ -n "$(git status --porcelain)" ]; then
+            echo "⚠️  Hay cambios sin confirmar"
+        else
+            echo "✅ Repositorio limpio"
+        fi
+    else
+        echo "❌ No es un repositorio git"
+    fi
+    
+    echo ""
+    
+    # Check for existing PDFs
+    echo "📄 Archivos PDF disponibles:"
+    if [ -f "cv_spanish.pdf" ]; then
+        echo "✅ cv_spanish.pdf ($(stat -c%s cv_spanish.pdf) bytes)"
+    else
+        echo "❌ cv_spanish.pdf - No disponible"
+    fi
+    
+    if [ -f "cv_english.pdf" ]; then
+        echo "✅ cv_english.pdf ($(stat -c%s cv_english.pdf) bytes)"
+    else
+        echo "❌ cv_english.pdf - No disponible"
+    fi
+    
+    echo ""
+    echo "🛠️  Para compilar: ./init [spanish|english|both]"
+}
+
+setup_project() {
+    echo "🚀 Configurando proyecto CV bilingüe..."
+    
+    # Create build directory if it doesn't exist
+    mkdir -p build
+    
+    # Set executable permissions
+    chmod +x init
+    
+    echo "✅ Proyecto configurado correctamente"
+    echo ""
+    echo "🎉 ¡Listo! Ya puedes compilar tu CV:"
+    echo "   ./init          - Compila en español"
+    echo "   ./init english  - Compila en inglés"
+    echo "   ./init both     - Compila ambas versiones"
+}
+
+# Main logic
+case "${1:-spanish}" in
+    "help"|"-h"|"--help")
+        show_help
+        ;;
+    "setup")
+        check_dependencies
+        setup_project
+        ;;
+    "status")
+        show_status
+        ;;
+    "english"|"en"|"")
+        check_dependencies
+        echo "🇬🇧 Compilando CV en inglés..."
+        make english
+        ;;
+    "spanish"|"es")
+        check_dependencies
+        echo "🇪🇸 Compilando CV en español..."
+        make spanish
+        ;;
+    "both")
+        check_dependencies
+        echo "🌍 Compilando ambas versiones..."
+        make both
+        ;;
+    "clean")
+        echo "🧹 Limpiando archivos temporales..."
+        make clean
+        ;;
+    *)
+        echo "❌ Error: Comando desconocido '$1'"
+        echo ""
+        show_help
+        exit 1
+        ;;
+esac

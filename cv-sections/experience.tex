@@ -1,51 +1,80 @@
 %----------------------------------------------------------------------------------------
-%    SECTION TITLE
+%	SECTION TITLE
 %----------------------------------------------------------------------------------------
-\ifthenelse{\equal{\lang}{es}}{\cvsection{Experiencia}}{\cvsection{Experience}}
+
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Experiencia}
+}{
+    \cvsection{Experience}
+}
+
 %----------------------------------------------------------------------------------------
-%    SECTION CONTENT
+%	SECTION CONTENT
 %----------------------------------------------------------------------------------------
+
 \begin{cventries}
 
+%------------------------------------------------
+
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cventry
+    {Asistente Técnico de Laboratorio} % Job title
+    {Universidad Distrital Francisco José de Caldas} % Organization
+    {Bogotá, D.C.} % Location
+    {May. 2024 - Presente} % Date(s)
+    { % Description(s) of tasks/responsibilities
+    \begin{cvitems}
+    \item {Atendí docentes, estudiantes y público en general según las necesidades de los laboratorios y almacén de biología.}
+    \item {Realicé actividades de alistamiento, préstamo y recepción de equipos e insumos, así como velé por el correcto funcionamiento de los equipos y el uso de materiales.}
+    \item {Capacité a usuarios en el uso de los laboratorios, tanto de forma presencial como mediante herramientas digitales.}
+    \item {Llevé a cabo mantenimientos preventivos y correctivos de los equipos del laboratorio.}
+    \end{cvitems}
+    }
+}{
+    \cventry
+    {Technical Laboratory Assistant} % Job title
+    {Francisco José de Caldas District University} % Organization
+    {Bogotá, D.C.} % Location
+    {May. 2024 ‑ Present} % Date(s)
+    { % Description(s) of tasks/responsibilities
+    \begin{cvitems}
+    \item {Attend to faculty, students, and the general public according to the needs of the biology laboratories and storage.}
+    \item {Carry out tasks related to the preparation, lending, and receiving of equipment and supplies, ensuring the proper functioning of equipment and the appropriate use of materials.}
+    \item {Train users in laboratory practices, both in-person and through digital tools.}
+    \item {Perform preventive and corrective maintenance on laboratory equipment.}
+    \end{cvitems}
+    }
+}
+
+%------------------------------------------------    
+
 \cventry
-{\ifthenelse{\equal{\lang}{es}}{Asistente Técnico de Laboratorio}{Laboratory Technician}} % Job title
-{\ifthenelse{\equal{\lang}{es}}{Universidad Distrital Francisco José de Caldas}{Francisco José de Caldas District University}} % Organization
+{Professional Internship in Biology Education} % Job title
+{Francisco José de Caldas District University} % Organization
 {Bogotá, D.C.} % Location
-{May. 2024 - \ifthenelse{\equal{\lang}{es}}{Presente}{Present}} % Date(s)
+{Feb. ‑ Nov. 2020} % Date(s)
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item {\ifthenelse{\equal{\lang}{es}}{Atendí docentes, estudiantes y público en general según las necesidades de los laboratorios y almacén de biología.}{Assisted faculty, students, and the general public according to the needs of the biology laboratories and warehouse.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Realicé actividades de alistamiento, préstamo y recepción de equipos e insumos, así como velé por el correcto funcionamiento de los equipos y el uso de materiales.}{Performed equipment preparation, lending, and receiving, ensuring proper functioning and usage of laboratory equipment and materials.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Capacité a usuarios en el uso de los laboratorios, tanto de forma presencial como mediante herramientas digitales.}{Trained users in laboratory usage, both in-person and through digital tools.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Llevé a cabo mantenimientos preventivos y correctivos de los equipos del laboratorio.}{Conducted preventive and corrective maintenance on laboratory equipment.}}
+\item {Carried out academic activities within the framework of Professional Internships III and IV, focused on the Bachelor’s Degree in Biology.}
+\item {Completed the Professional Internship at the Francisco José de Caldas Technical Industrial Institute, contributing to the educational process of afternoon-shift students.}
 \end{cvitems}
 }
 
-%------------------------------------------------
-\cventry
-{\ifthenelse{\equal{\lang}{es}}{Practicas Profesionales Licenciatura en Biología}{Biology Degree Professional Practice}} % Job title
-{\ifthenelse{\equal{\lang}{es}}{Universidad Distrital Francisco José de Caldas}{Francisco José de Caldas District University}} % Organization
-{Bogotá, D.C.} % Location
-{Feb. - Nov. 2020} % Date(s)
-{ % Description(s) of tasks/responsibilities
-\begin{cvitems}
-\item {\ifthenelse{\equal{\lang}{es}}{Desarrollé actividades académicas en el marco de las Prácticas Profesionales III y IV, con enfoque en la Licenciatura en Biología.}{Developed academic activities as part of Professional Practices III and IV, focusing on the Biology Degree.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Realicé la Práctica Profesional en el Instituto Técnico Industrial Francisco José de Caldas, contribuyendo al proceso educativo de los estudiantes de jornada tarde.}{Conducted Professional Practice at Francisco José de Caldas Technical Industrial Institute, contributing to the afternoon session educational process.}}
-\end{cvitems}
-}
+%------------------------------------------------ 
 
-%------------------------------------------------
 \cventry
-{\ifthenelse{\equal{\lang}{es}}{Instructor de Talleres}{Workshop Instructor}} % Job title
-{\ifthenelse{\equal{\lang}{es}}{Universidad Distrital Francisco José de Caldas}{Francisco José de Caldas District University}} % Organization
+{Workshop Instructor} % Job title
+{Francisco José de Caldas District University} % Organization
 {Bogotá, D.C.} % Location
 {Jul. - Ago. 2018} % Date(s)
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item {\ifthenelse{\equal{\lang}{es}}{Proporcioné soporte técnico esencial para la realización de talleres, con el objetivo de fortalecer las competencias informáticas de los participantes.}{Provided technical support for workshops aimed at strengthening participants' computer skills.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Contribuí al enriquecimiento de las habilidades técnicas de los participantes, a través de una asesoría especializada y talleres centrados en los principios básicos de Linux.}{Enhanced participants' technical skills through specialized guidance and workshops on basic Linux principles.}}
+\item {Provided technical support to facilitate the execution of workshops aimed at enhancing computer literacy.}
+\item {Offered assistance to ensure the smooth running of technical workshops and provided guidance to participants on the basic concepts of Linux.}
+\item {Supported the development of technical skills through the provision of expert guidance and technical support, as well as conducting workshops on the fundamental principles of Linux.}
 \end{cvitems}
 }
 
 %------------------------------------------------
+
 \end{cventries}

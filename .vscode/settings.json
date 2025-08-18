@@ -1,0 +1,57 @@
+{
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "make",
+      "command": "make",
+      "args": ["-C", "%DIR%"],
+      "env": {}
+    },
+    {
+      "name": "make-english",
+      "command": "make",
+      "args": ["-C", "%DIR%", "english"],
+      "env": {}
+    },
+    {
+      "name": "make-spanish",
+      "command": "make",
+      "args": ["-C", "%DIR%", "spanish"],
+      "env": {}
+    },
+    {
+      "name": "make-both",
+      "command": "make",
+      "args": ["-C", "%DIR%", "both"],
+      "env": {}
+    },
+    {
+      "name": "make-clean",
+      "command": "make",
+      "args": ["-C", "%DIR%", "clean"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Make (default)",
+      "tools": ["make"]
+    },
+    {
+      "name": "Make English",
+      "tools": ["make-english"]
+    },
+    {
+      "name": "Make Spanish",
+      "tools": ["make-spanish"]
+    },
+    {
+      "name": "Make Both",
+      "tools": ["make-both"]
+    },
+    {
+      "name": "Make Clean",
+      "tools": ["make-clean"]
+    }
+  ]
+}

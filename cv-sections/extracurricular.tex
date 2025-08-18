@@ -1,47 +1,68 @@
 %----------------------------------------------------------------------------------------
-%    SECTION TITLE
+%	SECTION TITLE
 %----------------------------------------------------------------------------------------
-\ifthenelse{\equal{\lang}{es}}{\cvsection{Actividad Extracurricular}}{\cvsection{Extracurricular Activities}}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Actividad Extracurricular}
+}{
+    \cvsection{Extracurricular Activity}
+}
 %----------------------------------------------------------------------------------------
-%    SECTION CONTENT
+%	SECTION CONTENT
 %----------------------------------------------------------------------------------------
 \begin{cventries}
 %------------------------------------------------
-\cventry
-{\ifthenelse{\equal{\lang}{es}}{Investigador en Formación}{Researcher in Training}} % Affiliation/role
-{\ifthenelse{\equal{\lang}{es}}{GiBBS (Grupo de Investigación en Bioinformática y Biología de Sistemas)}{GiBBS (Bioinformatics and Systems Biology Research Group)}} % Organization/group
-{Bogotá D.C., Colombia} % Location
-{Nov. 2023 - \ifthenelse{\equal{\lang}{es}}{Presente}{Present}} % Date(s)
-{ % Description(s) of experience/contributions/knowledge
-\begin{cvitems}
-\item {\ifthenelse{\equal{\lang}{es}}{Desarrollo de un modelo a escala genómica para la papa, aplicando técnicas avanzadas de bioinformática y biología de sistemas computacionales.}{Developed a genome-scale model for potatoes, applying advanced bioinformatics and computational systems biology techniques.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Utilización de herramientas basadas en Linux para el análisis de datos genómicos, demostrando competencia en sistemas operativos Linux y bioinformática.}{Used Linux-based tools for genomic data analysis, demonstrating proficiency in Linux systems and bioinformatics.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Contribución en la redacción de propuestas de investigación y publicaciones científicas relacionadas con la genómica y la bioinformática.}{Contributed to writing research proposals and scientific publications related to genomics and bioinformatics.}}
-\end{cvitems}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cventry
+    {Investigador en Formación - Universidad Nacional de Colombia} % Affiliation/role
+    {GiBBS (Grupo de Investigación en Bioinformática y Biología de Sistemas)} % Organization/group
+    {Bogotá D.C. - Colombia} % Location
+    {Nov. 2023 - Presente} % Date(s)
+    { % Description(s) of experience/contributions/knowledge
+    \begin{cvitems}
+    \item {Desarrollo de un modelo a escala genómica para la papa, aplicando técnicas avanzadas de bioinformática y biología de sistemas computacionales.}
+    \item {Utilización de herramientas basadas en Linux para el análisis de datos genómicos, demostrando competencia en sistemas operativos Linux y bioinformática.}
+    \item {Contribución en la redacción de propuestas de investigación y publicaciones científicas relacionadas con la genómica y la bioinformática.}
+    \end{cvitems}
+    }
+}{
+    \cventry
+    {Researcher in Training - National University of Colombia} % Affiliation/role
+    {GiBBS (Research Group in Bioinformatics and Systems Biology)} % Organization/group
+    {Bogotá D.C. - Colombia} % Location
+    {Nov. 2023 - Present} % Date(s)
+    { % Description(s) of experience/contributions/knowledge
+    \begin{cvitems}
+    \item {Development of a genome-scale model for potato, applying advanced techniques in bioinformatics and computational systems biology.}
+    \item {Use of Linux-based tools for genomic data analysis, demonstrating proficiency in Linux operating systems and bioinformatics.}
+    \item {Contribution to the drafting of research proposals and scientific publications related to genomics and bioinformatics.}
+    \end{cvitems}
+    }
 }
+
 %------------------------------------------------
 \cventry
-{\ifthenelse{\equal{\lang}{es}}{Estudiante Auxiliar}{Student Assistant}} % Affiliation/role
-{\ifthenelse{\equal{\lang}{es}}{Especialización en Iluminación Pública y Privada}{Specialization in Public and Private Lighting}} % Organization/group
-{Bogotá D.C., Colombia} % Location
-{Jun. 2023 - Dic. 2023} % Date(s)
+{Student Assistant - National University of Colombia} % Affiliation/role
+{Specialization in Public and Private Lighting} % Organization/group
+{Bogotá D.C. - Colombia} % Location
+{Jun. 2023 - Dec. 2023} % Date(s)
 { % Description(s) of experience/contributions/knowledge
 \begin{cvitems}
-\item {\ifthenelse{\equal{\lang}{es}}{Asistencia en el desarrollo de laboratorios prácticos y apoyo logístico para la coordinación de actividades académicas en la especialización.}{Assisted in developing practical laboratories and provided logistical support for coordinating academic activities in the specialization.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Colaboración estrecha con el cuerpo docente para la planeación y ejecución de actividades educativas y talleres relacionados con la iluminación pública y privada.}{Worked closely with faculty in planning and executing educational activities and workshops on public and private lighting.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Contribución al funcionamiento administrativo de la especialización, asegurando una comunicación fluida entre estudiantes, profesores y el departamento administrativo.}{Contributed to the administrative operation of the specialization, ensuring smooth communication between students, faculty, and the administrative department.}}
+\item {Assisted in the development of practical laboratories and provided logistical support for the coordination of academic activities in the specialization.}
+\item {Collaborated closely with faculty in the planning and execution of educational activities and workshops related to public and private lighting.}
+\item {Contributed to the administrative operations of the specialization, ensuring smooth communication between students, professors, and the administrative department.}
 \end{cvitems}
 }
+
 %------------------------------------------------
 \cventry
-{\ifthenelse{\equal{\lang}{es}}{Investigador en Formación}{Researcher in Training}} % Affiliation/role
-{\ifthenelse{\equal{\lang}{es}}{BIOMOLC (Grupo de Investigación en Biología Molecular y Agrigenómica)}{BIOMOLC (Molecular Biology and Agrigenomics Research Group)}} % Organization/group
-{Bogotá D.C., Colombia} % Location
-{Ago. 2021 - \ifthenelse{\equal{\lang}{es}}{Presente}{Present}} % Date(s)
+{Researcher in Training - Francisco José de Caldas District University} % Affiliation/role
+{BIOMOLC (Research Group in Molecular Biology and Agrigenomics)} % Organization/group
+{Bogotá D.C. - Colombia} % Location
+{Aug. 2027 - Present} % Date(s)
 { % Description(s) of experience/contributions/knowledge
 \begin{cvitems}
-\item {\ifthenelse{\equal{\lang}{es}}{Desarrollo de pipelines para el análisis de datos de RNA-Seq utilizando programas basados en Linux, demostrando competencia en Linux y bioinformática.}{Developed pipelines for RNA-Seq data analysis using Linux-based software, demonstrating proficiency in Linux and bioinformatics.}}
-\item {\ifthenelse{\equal{\lang}{es}}{Asistencia en la realización de talleres sobre Linux básico y análisis de datos, contribuyendo a la difusión de conocimientos y habilidades dentro del grupo de investigación.}{Assisted in conducting workshops on basic Linux and data analysis, contributing to knowledge dissemination within the research group.}}
+\item {Developed pipelines for RNA-Seq data analysis using Linux-based programs, demonstrating proficiency in Linux and bioinformatics.}
+\item {Assisted in conducting workshops on basic Linux and data analysis, contributing to the dissemination of knowledge and skills within the research group.}
 \end{cvitems}
 }
 %------------------------------------------------
