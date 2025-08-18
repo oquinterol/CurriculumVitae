@@ -2,7 +2,11 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Skills}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Habilidades}
+}{
+    \cvsection{Skills}
+}
 
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
@@ -12,33 +16,63 @@
 
     %------------------------------------------------
     
-    \cvskill
-    {Bioinformatics} % Category
-    {RNA-Seq and GBS analysis, bioinformatics pipeline development, omics data handling} % Skills
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Bioinformática} % Category
+        {Análisis de RNA-Seq y GBS, desarrollo de pipelines bioinformáticos, manejo de datos ómicos} % Skills
+    }{
+        \cvskill
+        {Bioinformatics} % Category
+        {RNA-Seq and GBS analysis, bioinformatics pipeline development, omics data handling} % Skills
+    }
     
     %------------------------------------------------
     
-    \cvskill
-    {Programming} % Category
-    {Python, Bash, R} % Skills
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Programación} % Category
+        {Python, Bash, R, C, SQL} % Skills
+    }{
+        \cvskill
+        {Programming} % Category
+        {Python, Bash, R} % Skills
+    }
     
     %------------------------------------------------
     
-    \cvskill
-    {Systems and Platforms} % Category
-    {Linux (Server Administration), Docker} % Skills
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Sistemas y Plataformas} % Category
+        {Linux (Administración de Servidores), Docker, Kubernetes} % Skills
+    }{
+        \cvskill
+        {Systems and Platforms} % Category
+        {Linux (Server Administration), Docker} % Skills
+    }
     
     %------------------------------------------------
     
-    \cvskill
-    {Collaboration and Version Control} % Category
-    {Git, GitHub} % Skills
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Colaboración y Versiones} % Category
+        {Git, GitHub} % Skills
+    }{
+        \cvskill
+        {Collaboration and Version Control} % Category
+        {Git, GitHub} % Skills
+    }
     
     %------------------------------------------------
     
-    \cvskill
-    {Data Development and Analysis} % Category
-    {Statistical analysis with R and Python, Visualization with ggplot2 and Matplotlib} % Skills
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvskill
+        {Desarrollo y Análisis de Datos} % Category
+        {CMake, Análisis estadístico con R y Python, Visualización con ggplot2 y Matplotlib} % Skills
+    }{
+        \cvskill
+        {Data Development and Analysis} % Category
+        {Statistical analysis with R and Python, Visualization with ggplot2 and Matplotlib} % Skills
+    }
     
     %------------------------------------------------
 \end{cvskills}

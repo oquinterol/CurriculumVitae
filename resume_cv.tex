@@ -26,6 +26,10 @@
 
 \documentclass[11pt, letterpaper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
 
+% Language configuration - Default: english
+\providecommand{\cvlang}{english}
+\usepackage{ifthen}
+
 \geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
 
 \fontdir[fonts/] % Specify the location of the included fonts
@@ -52,9 +56,9 @@
 %\mobile{(+57) 319 623 0827}
 
 \email{oquinterol@unal.edu.co}
-%homepage{www.posquit0.com}
-\github{quinterol}
-\linkedin{quinterol}
+\homepage{oquinterol.com}
+\github{oquinterol}
+\linkedin{oquinterol}
 %\skype{skypeid}
 %\stackoverflow{SOid}{SOname}
 \twitter{@oquinterol}
@@ -63,10 +67,16 @@
 %\xing{xing name}
 %\extrainfo{test} % Other text you want to include on this line
 
-\position{Bachelor of Science in Biology} % Your expertise/fields
-%\quote{``Make the change that you want to see in the world."} % A quote or statement
-
-\makecvfooter{\today}{Oscar A. Quintero López~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+% Position and footer based on language
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \position{Licenciado en Biología - Bioinformático}
+    \makecvfooter{\today}{Oscar A. Quintero López~~~·~~~Currículum Vitae}{\thepage}
+    \quote{``Piensa antes de escribir."}
+}{
+    \position{Bachelor of Science in Biology - Bioinformatician}
+    \makecvfooter{\today}{Oscar A. Quintero López~~~·~~~Résumé}{\thepage}
+    \quote{``Think before you type."} % A quote or statement
+}
 
 %----------------------------------------------------------------------------------------
 
@@ -89,9 +99,10 @@
 
 \input{cv-sections/extracurricular.tex}
 %\input{cv-sections/honors.tex}
-%\input{cv-sections/presentation.tex}
+\input{cv-sections/presentation.tex}
 %\input{cv-sections/writing.tex}
 %\input{cv-sections/committees.tex}
+\input{cv-sections/signature.tex}
 
 %----------------------------------------------------------------------------------------
 

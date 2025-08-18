@@ -2,7 +2,11 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Experience}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Experiencia}
+}{
+    \cvsection{Experience}
+}
 
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
@@ -12,18 +16,34 @@
 
 %------------------------------------------------
 
-\cventry
-{Technical Laboratory Assistant} % Job title
-{Francisco José de Caldas District University} % Organization
-{Bogotá, D.C.} % Location
-{May. 2024 ‑ Present} % Date(s)
-{ % Description(s) of tasks/responsibilities
-\begin{cvitems}
-\item {Attend to faculty, students, and the general public according to the needs of the biology laboratories and storage.}
-\item {Carry out tasks related to the preparation, lending, and receiving of equipment and supplies, ensuring the proper functioning of equipment and the appropriate use of materials.}
-\item {Train users in laboratory practices, both in-person and through digital tools.}
-\item {Perform preventive and corrective maintenance on laboratory equipment.}
-\end{cvitems}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cventry
+    {Asistente Técnico de Laboratorio} % Job title
+    {Universidad Distrital Francisco José de Caldas} % Organization
+    {Bogotá, D.C.} % Location
+    {May. 2024 - Presente} % Date(s)
+    { % Description(s) of tasks/responsibilities
+    \begin{cvitems}
+    \item {Atendí docentes, estudiantes y público en general según las necesidades de los laboratorios y almacén de biología.}
+    \item {Realicé actividades de alistamiento, préstamo y recepción de equipos e insumos, así como velé por el correcto funcionamiento de los equipos y el uso de materiales.}
+    \item {Capacité a usuarios en el uso de los laboratorios, tanto de forma presencial como mediante herramientas digitales.}
+    \item {Llevé a cabo mantenimientos preventivos y correctivos de los equipos del laboratorio.}
+    \end{cvitems}
+    }
+}{
+    \cventry
+    {Technical Laboratory Assistant} % Job title
+    {Francisco José de Caldas District University} % Organization
+    {Bogotá, D.C.} % Location
+    {May. 2024 ‑ Present} % Date(s)
+    { % Description(s) of tasks/responsibilities
+    \begin{cvitems}
+    \item {Attend to faculty, students, and the general public according to the needs of the biology laboratories and storage.}
+    \item {Carry out tasks related to the preparation, lending, and receiving of equipment and supplies, ensuring the proper functioning of equipment and the appropriate use of materials.}
+    \item {Train users in laboratory practices, both in-person and through digital tools.}
+    \item {Perform preventive and corrective maintenance on laboratory equipment.}
+    \end{cvitems}
+    }
 }
 
 %------------------------------------------------    

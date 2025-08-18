@@ -2,7 +2,11 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Presentation}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Presentación}
+}{
+    \cvsection{Presentation}
+}
 
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
@@ -12,28 +16,28 @@
 
 %------------------------------------------------
 
-\cventry
-{Presenter for <DEFCON 20th : The way to go to Las Vegas>} % Role
-{6th CodeEngn (Reverse Engineering Conference)} % Event
-{Seoul, S.Korea} % Location
-{Jul. 2012} % Date(s)
-{ % Description(s)
-\begin{cvitems}
-\item {Introduced CTF (Capture the Flag) hacking competition and advanced techniques and strategy for CTF}
-\end{cvitems}
-}
-
-%------------------------------------------------
-
-\cventry
-{Presenter for <Metasploit 101>} % Role
-{6th Hacking Camp - S.Korea} % Event
-{S.Korea} % Location
-{Sep. 2012} % Date(s)
-{ % Description(s)
-\begin{cvitems}
-\item {Introduced basic procedure for penetration testing and how to use Metasploit}
-\end{cvitems}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cventry
+    {Ponente: Genómica Funcional para la Identificación de variedades Mutantes de papa y arroz obtenidas por irradiación con Cobalto 60} % Rol
+    {II Simposio Internacional de Aplicaciones Radiactivas y Nucleares} % Evento
+    {Bogotá D.C, Colombia} % Ubicación
+    {7 - 10 de Nov. de 2023} % Fecha(s)
+    { % Descripción(es)
+    \begin{cvitems}
+    \item {Destacando el uso de técnicas de genómica funcional para el descubrimiento de variedades mutantes de cultivos esenciales como la papa y el arroz, mediante la exposición a la radiación de Cobalto 60.}
+    \end{cvitems}
+    }
+}{
+    \cventry
+    {Presenter: Functional Genomics for Identification of Mutant varieties of potato and rice obtained by Cobalt 60 irradiation} % Role
+    {II International Symposium on Radioactive and Nuclear Applications} % Event
+    {Bogotá D.C, Colombia} % Location
+    {Nov. 7 - 10, 2023} % Date(s)
+    { % Description(s)
+    \begin{cvitems}
+    \item {Highlighting the use of functional genomics techniques for the discovery of mutant varieties of essential crops such as potato and rice, through exposure to Cobalt 60 radiation.}
+    \end{cvitems}
+    }
 }
 
 %------------------------------------------------

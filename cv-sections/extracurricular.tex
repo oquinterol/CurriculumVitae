@@ -1,23 +1,42 @@
 %----------------------------------------------------------------------------------------
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
-\cvsection{Extracurricular Activity}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Actividad Extracurricular}
+}{
+    \cvsection{Extracurricular Activity}
+}
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
 %----------------------------------------------------------------------------------------
 \begin{cventries}
 %------------------------------------------------
-\cventry
-{Researcher in Training - National University of Colombia} % Affiliation/role
-{GiBBS (Research Group in Bioinformatics and Systems Biology)} % Organization/group
-{Bogotá D.C. - Colombia} % Location
-{Nov. 2023 - Present} % Date(s)
-{ % Description(s) of experience/contributions/knowledge
-\begin{cvitems}
-\item {Development of a genome-scale model for potato, applying advanced techniques in bioinformatics and computational systems biology.}
-\item {Use of Linux-based tools for genomic data analysis, demonstrating proficiency in Linux operating systems and bioinformatics.}
-\item {Contribution to the drafting of research proposals and scientific publications related to genomics and bioinformatics.}
-\end{cvitems}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cventry
+    {Investigador en Formación - Universidad Nacional de Colombia} % Affiliation/role
+    {GiBBS (Grupo de Investigación en Bioinformática y Biología de Sistemas)} % Organization/group
+    {Bogotá D.C. - Colombia} % Location
+    {Nov. 2023 - Presente} % Date(s)
+    { % Description(s) of experience/contributions/knowledge
+    \begin{cvitems}
+    \item {Desarrollo de un modelo a escala genómica para la papa, aplicando técnicas avanzadas de bioinformática y biología de sistemas computacionales.}
+    \item {Utilización de herramientas basadas en Linux para el análisis de datos genómicos, demostrando competencia en sistemas operativos Linux y bioinformática.}
+    \item {Contribución en la redacción de propuestas de investigación y publicaciones científicas relacionadas con la genómica y la bioinformática.}
+    \end{cvitems}
+    }
+}{
+    \cventry
+    {Researcher in Training - National University of Colombia} % Affiliation/role
+    {GiBBS (Research Group in Bioinformatics and Systems Biology)} % Organization/group
+    {Bogotá D.C. - Colombia} % Location
+    {Nov. 2023 - Present} % Date(s)
+    { % Description(s) of experience/contributions/knowledge
+    \begin{cvitems}
+    \item {Development of a genome-scale model for potato, applying advanced techniques in bioinformatics and computational systems biology.}
+    \item {Use of Linux-based tools for genomic data analysis, demonstrating proficiency in Linux operating systems and bioinformatics.}
+    \item {Contribution to the drafting of research proposals and scientific publications related to genomics and bioinformatics.}
+    \end{cvitems}
+    }
 }
 
 %------------------------------------------------

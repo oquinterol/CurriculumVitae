@@ -2,7 +2,11 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Education}
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvsection{Educación}
+}{
+    \cvsection{Education}
+}
 
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
@@ -11,22 +15,42 @@
 \begin{cventries}
     %------------------------------------------------
     
-    \cventry
-    {Bachelor of Science in Biology} % Degree
-    {Francisco José de Caldas District University} % Institution
-    {Bogotá D.C., Colombia} % Location
-    {Feb. 2016 - Dec. 2022} % Date(s)
-    { % Description(s) bullet points
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cventry
+        {Licenciatura en Biología} % Degree
+        {Universidad Distrital Francisco José de Caldas} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {Feb. 2016 - Dic. 2022} % Date(s)
+        { % Description(s) bullet points
+        }
+    }{
+        \cventry
+        {Bachelor of Science in Biology} % Degree
+        {Francisco José de Caldas District University} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {Feb. 2016 - Dec. 2022} % Date(s)
+        { % Description(s) bullet points
+        }
     }
     
     %------------------------------------------------
     
-    \cventry
-    {Master’s Student in Bioinformatics} % Degree
-    {National University of Colombia} % Institution
-    {Bogotá D.C., Colombia} % Location
-    {Aug. 2023 - Present} % Date(s)
-    { % Description(s) bullet points
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cventry
+        {Estudiante Maestría en Bioinformática} % Degree
+        {Universidad Nacional de Colombia} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {Ago. 2023 - Presente} % Date(s)
+        { % Description(s) bullet points
+        }
+    }{
+        \cventry
+        {Master's Student in Bioinformatics} % Degree
+        {National University of Colombia} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {Aug. 2023 - Present} % Date(s)
+        { % Description(s) bullet points
+        }
     }
     
     %------------------------------------------------
@@ -34,33 +58,63 @@
     
     
     %	SECTION Professional Development
-    \cvsection{Professional Development}
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cvsection{Desarrollo Profesional}
+    }{
+        \cvsection{Professional Development}
+    }
     %	SECTION CONTENT
     \begin{cventries}
     %------------------------------------------------
     
-    \cventry
-    {Ensembl Browser Workshop} % Course
-    {National University of Colombia} % Institution
-    {Bogotá D.C., Colombia} % Location
-    {Jul. 2024} % Date(s)
-    { % Description(s) bullet points
-    \begin{cvitems}
-    \item {Attendance at the workshop on using the Ensembl browser for genomic data queries.}
-    \end{cvitems}
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cventry
+        {Ensembl Browser Workshop} % Course
+        {Universidad Nacional de Colombia} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {Jul. 2024} % Date(s)
+        { % Description(s) bullet points
+        \begin{cvitems}
+        \item {Asistencia al taller sobre el uso del navegador Ensembl para la consulta de datos genómicos.}
+        \end{cvitems}
+        }
+    }{
+        \cventry
+        {Ensembl Browser Workshop} % Course
+        {National University of Colombia} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {Jul. 2024} % Date(s)
+        { % Description(s) bullet points
+        \begin{cvitems}
+        \item {Attendance at the workshop on using the Ensembl browser for genomic data queries.}
+        \end{cvitems}
+        }
     }
     
     %------------------------------------------------
     
-    \cventry
-    {Algorithmics 0.0} % Course
-    {National University of Colombia} % Institution
-    {Bogotá D.C., Colombia} % Location
-    {May. - Jun. 2023} % Date(s)
-    { % Description(s) bullet points
-    \begin{cvitems}
-    \item {Duration of the course: 48 hours, theoretical and practical.}
-    \end{cvitems}
+    \ifthenelse{\equal{\cvlang}{spanish}}{
+        \cventry
+        {Algoritmia 0.0} % Course
+        {Universidad Nacional de Colombia} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {May. - Jun. 2023} % Date(s)
+        { % Description(s) bullet points
+        \begin{cvitems}
+        \item {Duración del curso: 48 horas, teórico y práctico.}
+        \end{cvitems}
+        }
+    }{
+        \cventry
+        {Algorithmics 0.0} % Course
+        {National University of Colombia} % Institution
+        {Bogotá D.C., Colombia} % Location
+        {May. - Jun. 2023} % Date(s)
+        { % Description(s) bullet points
+        \begin{cvitems}
+        \item {Duration of the course: 48 hours, theoretical and practical.}
+        \end{cvitems}
+        }
     }
     
     %------------------------------------------------
