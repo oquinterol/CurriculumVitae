@@ -66,6 +66,8 @@
 \RequirePackage{etoolbox}
 % Needed to change line spacing in specific environment
 \RequirePackage{setspace}
+% Package for automatic page breaks
+\RequirePackage{needspace}
 % Needed to manage fonts
 \RequirePackage[quiet]{fontspec}
 % To support LaTeX quoting style
@@ -529,6 +531,7 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
+  \needspace{4\baselineskip}% Ensures at least 4 lines of space remain on page
   \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
   \phantomsection
