@@ -33,6 +33,7 @@
 *.run.xml
 
 ## Build tool auxiliary files:
+build/
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
