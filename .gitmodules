@@ -1,0 +1,3 @@
+[submodule "letters"]
+	path = letters
+	url = git@oquinterol.github.com:oquinterol/CurriculumVitae-Letters.git
