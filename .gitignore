@@ -277,7 +277,6 @@ TSWLatexianTemp*
 *.lpz
 # Signature only on local
 img/firma.png
-certifications/
 # Last version only code on CV
 cv_spanish.pdf
 cv_english.pdf

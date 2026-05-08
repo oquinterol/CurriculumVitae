@@ -1,3 +1,6 @@
 [submodule "letters"]
 	path = letters
 	url = git@oquinterol.github.com:oquinterol/CurriculumVitae-Letters.git
+[submodule "certifications"]
+	path = certifications
+	url = git@oquinterol.github.com:oquinterol/CurriculumVitae-Certifications.git
