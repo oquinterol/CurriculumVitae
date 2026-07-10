@@ -45,6 +45,10 @@
 latex.out/
 build/
 others/
+
+# Private local signature assets (never commit)
+assets/signature/
+
 ## Auxiliary and intermediate files from other packages:
 # algorithms
 *.alg
