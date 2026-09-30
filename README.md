@@ -13,8 +13,24 @@ El CV está actualmente configurado con:
 ## Estructura del Proyecto
 
 - `cv.tex` - Archivo principal del CV
-- `cv-sections/` - Directorio con secciones modulares del CV
-- `images/` - Recursos gráficos (excluido del repositorio por privacidad)
+- `cv-sections/` - Secciones bilingües del CV; `education.tex` contiene los grados y `courses.tex` la formación complementaria
+- `certifications/` - Submódulo privado con los certificados de respaldo
+- `letters/` - Submódulo privado con las cartas de presentación
+- `assets/signature/` - Firma local opcional (excluida del repositorio)
+- `build/` - Artefactos temporales (excluidos del repositorio)
+- `Makefile` - Interfaz de compilación y protección opcional de los CV firmados
+
+## Compilación
+
+```bash
+make         # Ambos CV y cartas
+make both    # Solo CV en español e inglés
+make spanish # Solo CV en español
+make english # Solo CV en inglés
+make letters # Solo cartas
+```
+
+Los CV generados (`cv_spanish.pdf` y `cv_english.pdf`) permanecen locales y no se versionan. Los cursos están ordenados por fecha de finalización; los grupos de cursos muestran las fechas y horas individuales.
 
 ## TODO
 ### Privacidad y Seguridad
