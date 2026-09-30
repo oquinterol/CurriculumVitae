@@ -38,9 +38,9 @@
 % Color for highlights
 \colorlet{awesome}{awesome-red} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
 
-% Configuración de ruta de firma: vector trazado desde PNG a SVG path.
-% Se incluye el PDF vectorial generado desde assets/signature/Firma-Alexis-path.svg
-% para evitar incrustar la firma como imagen raster copiable desde el PDF final.
+% Configuración de ruta de firma: PDF vectorial trazado desde un SVG.
+% La protección contra extracción se aplica desde el Makefile únicamente cuando
+% este archivo existe y la firma se incluye en el documento.
 \newcommand{\signaturepath}{assets/signature/Firma-Alexis-path.pdf}
 %\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
 
@@ -64,7 +64,7 @@
 \linkedin{oquinterol}
 %\skype{skypeid}
 %\stackoverflow{SOid}{SOname}
-\twitter{@oquinterol}
+\orcid{0000-0001-8926-6400}
 %\linkedin{linkedin name}
 %\reddit{reddit account}
 %\xing{xing name}
@@ -76,7 +76,7 @@
     \makecvfooter{\today}{Oscar A. Quintero López~~~·~~~Hoja de Vida}{\thepage}
     \quote{``Piensa antes de escribir.''}
 }{
-    \position{B.Sc. in Biology and M.Sc. in Bioinformatics}
+    \position{Biology Educator and M.Sc. in Bioinformatics}
     \makecvfooter{\today}{Oscar A. Quintero López~~~·~~~Résumé}{\thepage}
     \quote{``Think before you type.''} % A quote or statement
 }
@@ -93,15 +93,12 @@
 
 \input{cv-sections/experience.tex}
 \input{cv-sections/education.tex}
-%\newpage
+\input{cv-sections/extracurricular.tex}
 \input{cv-sections/skills.tex}
 \input{cv-sections/language.tex}
-
-%\newpage % Force a new page for looks
-
-\input{cv-sections/extracurricular.tex}
-\input{cv-sections/honors.tex}
+\input{cv-sections/courses.tex}
 \input{cv-sections/presentation.tex}
+\input{cv-sections/honors.tex}
 %\input{cv-sections/writing.tex}
 %\input{cv-sections/committees.tex}
 \IfFileExists{\signaturepath}{\input{cv-sections/signature.tex}}{}

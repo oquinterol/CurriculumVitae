@@ -304,6 +304,10 @@
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 
+% Defines writer's ORCID (optional)
+% Usage: \orcid{<ORCID identifier>}
+\newcommand*{\orcid}[1]{\def\@orcid{#1}}
+
 % Usage: \twitter{<twitter handle>}
 \newcommand*{\twitter}[1]{\def\@twitter{#1}}
 
@@ -427,7 +431,7 @@
   }%
   \begin{minipage}[c]{\headerphotowidth}%
     \ifthenelse{\equal{\@photoalign}{left}}{\raggedright\drawphoto}{}
-  \end{minipage}
+  \end{minipage}%
   \begin{minipage}[c]{\headertextwidth}
     \ifthenelse{\equal{#1}{L}}{\raggedright}{\ifthenelse{\equal{#1}{R}}{\raggedleft}{\centering}}
     \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
@@ -478,6 +482,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
+        }%
+      \ifthenelse{\isundefined{\@orcid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://orcid.org/\@orcid}{\faExternalLink\acvHeaderIconSep ORCID: \@orcid}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
@@ -628,7 +638,7 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} R{4.5cm} L{\dimexpr\textwidth-4.5cm-2\tabcolsep\relax}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} R{4.5cm} L{\dimexpr\textwidth-4.5cm-4\tabcolsep\relax}}
 }{%
     \end{tabular*}
   \end{center}

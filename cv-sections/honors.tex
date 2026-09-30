@@ -3,24 +3,35 @@
 %----------------------------------------------------------------------------------------
 
 \ifthenelse{\equal{\cvlang}{spanish}}{
-    \cvsection{Reconocimientos}
+    \cvsection{Servicio Voluntario}
 }{
-    \cvsection{Honors \& Awards}
+    \cvsection{Volunteer Service}
 }
 
 %----------------------------------------------------------------------------------------
 %	VOLUNTEER SERVICE SUBSECTION
 %----------------------------------------------------------------------------------------
 
-\ifthenelse{\equal{\cvlang}{spanish}}{
-    \cvsubsection{Servicio Voluntario}
-}{
-    \cvsubsection{Volunteer Service}
-}
-
 %------------------------------------------------
 
 \begin{cvhonors}
+
+%------------------------------------------------
+
+% Fuente: certifications/honors/xmas-meetup-2025.pdf (solo certifica el año).
+\ifthenelse{\equal{\cvlang}{spanish}}{
+    \cvhonor
+    {Organizador}
+    {RSG Colombia X-Mas Meet Up 2025}
+    {}
+    {2025}
+}{
+    \cvhonor
+    {Organizer}
+    {RSG Colombia X-Mas Meet Up 2025}
+    {}
+    {2025}
+}
 
 %------------------------------------------------
 
