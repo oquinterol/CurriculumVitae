@@ -32,6 +32,19 @@ make letters # Solo cartas
 
 Los CV generados (`cv_spanish.pdf` y `cv_english.pdf`) permanecen locales y no se versionan. Los cursos están ordenados por fecha de finalización; los grupos de cursos muestran las fechas y horas individuales.
 
+## Variante docente — El Bosque, 2027
+
+```bash
+make el-bosque-docencia
+```
+
+Fuentes independientes en `applications/el-bosque-docencia-2027/cv.tex` y PDF local
+`applications/el-bosque-docencia-2027/Oscar_Quintero_CV_El_Bosque.pdf`.
+Prioriza formación pedagógica, Bioinformática y apoyo a laboratorios. No modifica
+el CV general. Alcance y evidencias en `applications/el-bosque-docencia-2027/REVISION.md`
+(nota interna, no adjuntar). Las variantes se generan sin firma ni restricciones de
+extracción; solo se añade firma por solicitud explícita. `make clean` también elimina el PDF de esta variante.
+
 ## TODO
 ### Privacidad y Seguridad
 - [ ] **CRÍTICO**: Evitar exponer información privada como:

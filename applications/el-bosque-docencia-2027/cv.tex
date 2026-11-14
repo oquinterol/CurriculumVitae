@@ -1,0 +1,126 @@
+% Variante independiente. Compilar desde la raíz: make el-bosque-docencia
+\documentclass[11pt,letterpaper]{awesome-cv}
+\usepackage{ifthen}
+\usepackage[spanish]{babel}
+\providecommand{\cvlang}{spanish}
+\geometry{left=2cm,top=1.5cm,right=2cm,bottom=1.7cm,footskip=.5cm}
+\fontdir[fonts/]
+\colorlet{awesome}{awesome-red}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\name{Oscar A.}{Quintero López}
+\email{oquinterol@unal.edu.co}
+\homepage{oquinterol.com}
+\github{oquinterol}
+\linkedin{oquinterol}
+\orcid{0000-0001-8926-6400}
+\position{Licenciado en Biología · Magíster en Bioinformática}
+\makecvfooter{\today}{Oscar A. Quintero López · CV académico}{\thepage}
+% Sin firma: incluirla solo por solicitud explícita del usuario.
+% La clase original no inicia un párrafo tras el título de sección.
+% Corrección local: evitar texto en la misma línea que el encabezado.
+\renewenvironment{cvparagraph}{\par\vspace{2mm}\paragraphstyle}{\par\vspace{2mm}}
+
+\begin{document}
+\makecvheader
+
+\cvsection{Perfil académico}
+\begin{cvparagraph}
+Licenciado en Biología y magíster en Bioinformática, con experiencia en análisis de datos genómicos y transcriptómicos, desarrollo de flujos de trabajo en Linux y reconstrucción metabólica. Trayectoria en apoyo a prácticas universitarias de Biología, capacitación de usuarios de laboratorio y acompañamiento de talleres de Linux y análisis de datos. Formación pedagógica y práctica profesional en educación en Biología, articuladas con herramientas computacionales para el estudio de sistemas biológicos.
+\end{cvparagraph}
+
+\input{cv-sections/education.tex}
+
+\cvsection{Experiencia educativa y apoyo a la docencia}
+\begin{cventries}
+\cventry
+{Técnico de Laboratorio Científico · Contratista}
+{Universidad Distrital Francisco José de Caldas}
+{Bogotá, Colombia}
+{May. 2024---Sep. 2026}
+{\begin{cvitems}
+\item {Apoyo a prácticas de docencia e investigación en el Laboratorio de Biología de la Facultad de Ciencias Matemáticas y Naturales: alistamiento de equipos, insumos y espacios.}
+\item {Capacitación de usuarios y orientación ante dificultades durante las prácticas; acompañamiento en el uso seguro de equipos e infraestructura.}
+\item {Apoyo a la implementación, estandarización, validación y mejoramiento de técnicas, metodologías y protocolos para docencia, investigación y extensión.}
+\end{cvitems}}
+
+\cventry
+{Asistente estudiantil · Especialización en Iluminación Pública y Privada}
+{Universidad Nacional de Colombia}
+{Bogotá, Colombia}
+{Jun.---Dic. 2023}
+{\begin{cvitems}
+\item {Apoyo al desarrollo de laboratorios prácticos y a la coordinación de actividades académicas. Colaboración con el profesorado en la planificación y ejecución de actividades educativas y talleres.}
+\end{cvitems}}
+
+\cventry
+{Práctica Profesional III y IV · Licenciatura en Biología}
+{Instituto Técnico Industrial Francisco José de Caldas}
+{Bogotá, Colombia}
+{2020}
+{\begin{cvitems}
+\item {Práctica profesional en educación en Biología, jornada de la tarde, desarrollada en el marco de la Licenciatura de la Universidad Distrital.}
+\end{cvitems}}
+\end{cventries}
+
+\newpage
+\cvsection{Investigación en Bioinformática}
+\begin{cventries}
+\cventry
+{Investigador en formación · Universidad Nacional de Colombia}
+{GiBBS · Bioinformática y Biología de Sistemas}
+{Bogotá, Colombia}
+{Nov. 2023---Presente}
+{\begin{cvitems}
+\item {Desarrollo de un modelo metabólico a escala genómica de papa, integrando análisis genómico y biología de sistemas computacional.}
+\item {Contribución a la redacción de propuestas de investigación y textos científicos relacionados con genómica y bioinformática.}
+\end{cvitems}}
+
+\cventry
+{Investigador en formación · Universidad Distrital Francisco José de Caldas}
+{BIOMOLc · Biología Molecular}
+{Bogotá, Colombia}
+{Ago. 2017---Presente}
+{\begin{cvitems}
+\item {Desarrollo de flujos de trabajo para análisis de RNA-Seq con herramientas basadas en Linux.}
+\item {Apoyo a talleres de Linux básico y análisis de datos dentro del grupo de investigación.}
+\end{cvitems}}
+\end{cventries}
+
+\cvsection{Competencias técnicas}
+\begin{cvparagraph}
+\textbf{Genómica y transcriptómica:} control de calidad con FastQC/MultiQC; alineamiento con BWA/Bowtie2; BLAST+; RNA-Seq; ensamblaje con hifiasm y Trinity; evaluación con BUSCO; anotación con AUGUSTUS; manejo de FASTA/FASTQ, BAM, VCF y GFF3.\par
+\textbf{Biología de sistemas:} reconstrucción de modelos metabólicos a escala genómica; COBRApy, COBRA Toolbox, KEGG, SBML, MEMOTE y análisis FBA/FVA.\par
+\textbf{Programación y análisis:} Python (pandas, NumPy, SciPy, Matplotlib), R (tidyverse/ggplot2), Bash y Jupyter.\par
+\textbf{Trabajo reproducible:} Linux, Git, Conda, Docker, Snakemake, Nextflow y SLURM.
+\end{cvparagraph}
+
+\cvsection{Formación complementaria}
+\begin{cventries}
+\cventry
+{Producción de proteínas recombinantes · Curso de 40 horas}
+{Universidad Distrital · Comité Organizador CIIEB}
+{Bogotá, Colombia}
+{Nov. 2025}
+{}
+\cventry
+{1.er Encuentro de Microbiología (EMIC) · Participación, 12 horas}
+{American Society for Microbiology (ASM)}
+{Cali, Colombia}
+{Nov. 2025}
+{}
+\cventry
+{Ensembl Browser Workshop}
+{Ensembl}
+{Bogotá, Colombia}
+{Jul. 2024}
+{}
+\end{cventries}
+
+\cvsection{Comunicación científica}
+\begin{cvparagraph}
+\textbf{Póster · ISCB-Latin America SoIBio CCBCOL 2024:} Ensamblaje de genoma de alta calidad de \textit{Solanum tuberosum} Grupo Phureja: análisis comparativo con el genoma público doble monoploide DM 1-3 516 R44.
+\end{cvparagraph}
+\begin{cvparagraph}
+\textbf{Idiomas:} español nativo; inglés intermedio.
+\end{cvparagraph}
+\end{document}

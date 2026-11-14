@@ -45,6 +45,8 @@
 latex.out/
 build/
 others/
+# Generated application CVs (may contain the local signature)
+/applications/**/*.pdf
 
 # Private local signature assets (never commit)
 assets/signature/

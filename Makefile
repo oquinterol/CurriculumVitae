@@ -16,7 +16,7 @@ define protect_signature_pdf
 	fi
 endef
 
-.PHONY: all spanish english letters clean help
+.PHONY: all spanish english letters el-bosque-docencia clean help
 
 # Default target - Both CV versions and all letters
 all: both letters
@@ -40,6 +40,14 @@ english:
 	$(call protect_signature_pdf,build/cv_english.pdf)
 	@cp build/cv_english.pdf ./cv_english.pdf
 	@echo "✅ CV en inglés compilado: cv_english.pdf"
+
+# Variante independiente para el reemplazo docente de El Bosque (2027).
+el-bosque-docencia:
+	@mkdir -p build/el-bosque-docencia
+	xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/el-bosque-docencia -jobname=Oscar_Quintero_CV_El_Bosque applications/el-bosque-docencia-2027/cv.tex
+	xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/el-bosque-docencia -jobname=Oscar_Quintero_CV_El_Bosque applications/el-bosque-docencia-2027/cv.tex
+	@cp build/el-bosque-docencia/Oscar_Quintero_CV_El_Bosque.pdf applications/el-bosque-docencia-2027/
+	@echo "✅ Variante compilada: applications/el-bosque-docencia-2027/Oscar_Quintero_CV_El_Bosque.pdf"
 
 # Both versions
 both: spanish english
@@ -66,6 +74,7 @@ clean:
 	@echo "🧹 Limpiando archivos temporales..."
 	@rm -rf build/
 	@rm -f cv_spanish.pdf cv_english.pdf
+	@rm -f applications/el-bosque-docencia-2027/Oscar_Quintero_CV_El_Bosque.pdf
 	@echo "✅ Limpieza completada"
 
 # Help
@@ -76,5 +85,6 @@ help:
 	@echo "  make english  - Compila CV en inglés"
 	@echo "  make both     - Compila ambas versiones del CV"
 	@echo "  make letters  - Compila todas las cartas en letters/"
+	@echo "  make el-bosque-docencia - Compila la variante docente para El Bosque"
 	@echo "  make clean    - Limpia archivos temporales"
 	@echo "  make help     - Muestra esta ayuda"
