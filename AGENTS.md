@@ -20,6 +20,7 @@
 - No omitas la compilación mediante el `Makefile` ni la sustituyas por comandos equivalentes.
 
 ## Firma y protección del PDF
+- Las variantes del CV no deben incluir firma, salvo solicitud explícita del usuario para esa variante. No aplicarles restricciones de extracción si no incluyen firma.
 - `cv.tex` incluye `assets/signature/Firma-Alexis-path.pdf` solo si el archivo existe.
 - El `Makefile` aplica restricciones de extracción únicamente a los CV que incluyen la firma; las cartas no se protegen mediante esta regla.
 - Estas restricciones dependen del visor PDF y dificultan la extracción, pero no constituyen protección DRM absoluta.
